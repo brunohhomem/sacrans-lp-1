@@ -81,6 +81,14 @@ a {
   background: rgba(181, 166, 66, 0.38);
 }
 
+.hero-skull {
+  right: clamp(-5rem, 4vw, 4rem);
+  top: clamp(10rem, 22vw, 17rem);
+  width: clamp(28rem, 42vw, 49rem);
+  rotate: -9deg;
+  opacity: 0.22;
+}
+
 .brush-title {
   width: fit-content;
   font-family: "Permanent Marker", Impact, sans-serif;
@@ -216,6 +224,12 @@ a {
   box-shadow: 16px 16px 0 #8c2727;
 }
 
+.hero-info-panel {
+  margin-top: clamp(1rem, -2vw, 2rem);
+  max-width: 48rem;
+  rotate: -1deg;
+}
+
 .taped-panel::before {
   left: 50%;
   top: -1.15rem;
@@ -247,6 +261,27 @@ a {
     radial-gradient(circle at 80% 70%, rgba(46, 46, 46, 0.1) 0 1px, transparent 1px),
     #e9e1d4;
   background-size: 9px 9px, 13px 13px, auto;
+}
+
+.final-address {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  border: 4px solid var(--ink);
+  background:
+    radial-gradient(circle at 24% 18%, rgba(46, 46, 46, 0.16) 0 1px, transparent 1px),
+    linear-gradient(154deg, rgba(181, 166, 66, 0.28), transparent 42%),
+    #e9e1d4;
+  background-size: 10px 10px, auto, auto;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  box-shadow: 14px 14px 0 var(--red);
+  rotate: 1.5deg;
+}
+
+.final-animation .event-animation {
+  float: none;
+  margin: 0 auto;
+  width: min(20rem, 72vw);
 }
 
 .eyebrow {
@@ -492,10 +527,18 @@ a {
     width: 100%;
   }
 
+  .hero-skull {
+    right: -8rem;
+    top: 18rem;
+    width: 30rem;
+    opacity: 0.16;
+  }
+
   .info-panel,
   .donation-block,
   .band-poster,
-  .reveal-item {
+  .reveal-item,
+  .final-address {
     rotate: 0deg;
   }
 

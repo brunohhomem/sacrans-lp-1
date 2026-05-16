@@ -1,7 +1,6 @@
 import sacranLogo from '../assets/sacrans.png'
 import sacranMc from '../assets/sacransmc.png'
 import skull from '../assets/skull.png'
-import { EventAnimation } from './EventAnimation'
 import { PlaceholderLogo } from './PlaceholderLogo'
 
 export function HeroSection() {
@@ -11,7 +10,7 @@ export function HeroSection() {
       <img
         src={skull}
         alt=""
-        className="pointer-events-none absolute -right-28 top-10 -z-10 w-[34rem] max-w-none rotate-[-10deg] opacity-[0.13] mix-blend-multiply sm:-right-10 lg:right-8 lg:top-2 lg:w-[42rem]"
+        className="hero-skull pointer-events-none absolute -z-10 max-w-none mix-blend-multiply"
       />
       <div className="grit-layer absolute inset-0 -z-10" />
 
@@ -22,7 +21,7 @@ export function HeroSection() {
         </div>
       </nav>
 
-      <div className="mx-auto grid max-w-7xl gap-10 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pt-16">
+      <div className="mx-auto grid max-w-7xl gap-10 pt-12 lg:grid-cols-[0.82fr_1fr] lg:items-center lg:pt-16">
         <div className="hero-copy max-w-3xl">
           <p className="brush-title mb-1 text-5xl font-black uppercase leading-none text-[#8c2727] sm:text-7xl">
             Esquenta
@@ -52,8 +51,11 @@ export function HeroSection() {
           </div>
         </div>
 
-        <aside className="info-panel taped-panel">
-          <EventAnimation />
+        <div className="hidden min-h-[34rem] lg:block" />
+      </div>
+
+      <div className="mx-auto max-w-7xl">
+        <aside className="info-panel hero-info-panel taped-panel">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8c2727]">Praça Hugo Lippi Junior 440</p>
           <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#2e2e2e] sm:text-4xl">
             Vila Bandeirantes, SP
