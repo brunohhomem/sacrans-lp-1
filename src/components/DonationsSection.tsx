@@ -1,5 +1,11 @@
 import { donations } from '../content'
-import { PlaceholderLogo } from './PlaceholderLogo'
+import larSaoJoaoLogo from '../assets/logo_larsaojoao.png'
+import santaCasaLogo from '../assets/logo_santacasadearacatuba.png'
+
+const donationLogos: Record<string, string> = {
+  'Santa Casa de Araçatuba': santaCasaLogo,
+  'Lar São João': larSaoJoaoLogo,
+}
 
 export function DonationsSection() {
   return (
@@ -19,7 +25,9 @@ export function DonationsSection() {
         <div className="grid gap-5 sm:grid-cols-2">
           {donations.map((institution) => (
             <article className="donation-block taped-panel" key={institution.name}>
-              <PlaceholderLogo label={institution.name} />
+              <div className="logo-image-frame donation-logo-frame">
+                <img src={donationLogos[institution.name]} alt={institution.name} className="logo-image" />
+              </div>
               <h3>{institution.name}</h3>
               <ul>
                 {institution.needs.map((need) => (

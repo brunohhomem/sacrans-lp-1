@@ -10,9 +10,9 @@ function App() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-zinc-100">
       <HeroSection />
-      <RevealsSection />
-      <DonationsSection />
       <BandsSection />
+      <DonationsSection />
+      <RevealsSection />
       <FinalCallSection />
       <SiteFooter />
     </main>

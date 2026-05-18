@@ -81,14 +81,6 @@ a {
   background: rgba(181, 166, 66, 0.38);
 }
 
-.hero-skull {
-  right: clamp(-5rem, 4vw, 4rem);
-  top: clamp(10rem, 22vw, 17rem);
-  width: clamp(28rem, 42vw, 49rem);
-  rotate: -9deg;
-  opacity: 0.22;
-}
-
 .brush-title {
   width: fit-content;
   font-family: "Permanent Marker", Impact, sans-serif;
@@ -153,7 +145,7 @@ a {
   box-shadow: 7px 7px 0 rgba(46, 46, 46, 0.14);
 }
 
-.placeholder-logo {
+.logo-image-frame {
   display: grid;
   min-height: 4.75rem;
   place-items: center;
@@ -164,13 +156,39 @@ a {
     #e9e1d4;
   background-size: 7px 7px, auto, auto;
   padding: 1rem 1.25rem;
-  text-align: center;
-  color: var(--ink);
-  font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: 1.45rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0;
+}
+
+.logo-image {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav-logo-frame {
+  min-height: 4.5rem;
+  width: clamp(8rem, 18vw, 12rem);
+  padding: 0.7rem 0.9rem;
+}
+
+.band-logo-frame {
+  min-height: 10.75rem;
+  background: var(--ink);
+  box-shadow: inset 0 0 0 6px var(--paper);
+}
+
+.band-logo-frame .logo-image {
+  max-height: 8.5rem;
+  filter: drop-shadow(0 2px 0 rgba(233, 225, 212, 0.18));
+}
+
+.donation-logo-frame {
+  height: 11.25rem;
+  padding: 1.05rem;
+}
+
+.donation-logo-frame .logo-image {
+  max-height: 9rem;
 }
 
 .red-ticket,
@@ -225,9 +243,40 @@ a {
 }
 
 .hero-info-panel {
-  margin-top: clamp(1rem, -2vw, 2rem);
+  overflow: hidden;
+  z-index: 3;
+  margin-top: 2rem;
   max-width: 48rem;
-  rotate: -1deg;
+  rotate: 3deg;
+  transform-origin: 50% 15%;
+}
+
+.hero-info-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-info-panel::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  width: min(22rem, 58vw);
+  aspect-ratio: 1;
+  background: url("./assets/skull.png") center / contain no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.12;
+  translate: -50% -50%;
+  rotate: -5deg;
+}
+
+@media (min-width: 1024px) {
+  .hero-info-panel {
+    margin-top: clamp(-32rem, -30vw, -22rem);
+    margin-left: auto;
+    max-width: 44rem;
+  }
 }
 
 .taped-panel::before {
@@ -254,7 +303,14 @@ a {
     #2e2e2e;
 }
 
-.paper-section,
+.paper-section {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(46, 46, 46, 0.12) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(46, 46, 46, 0.1) 0 1px, transparent 1px),
+    #e9e1d4;
+  background-size: 9px 9px, 13px 13px, auto;
+}
+
 .final-call {
   background:
     radial-gradient(circle at 20% 30%, rgba(46, 46, 46, 0.12) 0 1px, transparent 1px),
@@ -357,20 +413,22 @@ a {
 }
 
 .donation-block h3 {
-  margin-top: 1.35rem;
+  margin: 1.35rem 0 0;
   color: var(--ink);
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4.2vw, 2.85rem);
   font-weight: 950;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .donation-block ul {
-  margin: 1rem 0 0;
+  margin: 1.35rem 0 0;
   padding: 0;
   list-style: none;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
 .donation-block li + li {
@@ -475,14 +533,6 @@ a {
   color: var(--rust);
 }
 
-.band-poster .placeholder-logo {
-  min-height: 9rem;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: clamp(2.2rem, 7vw, 5rem);
-  box-shadow: inset 0 0 0 6px var(--paper);
-}
-
 .site-footer {
   border-top: 5px dashed rgba(233, 225, 212, 0.42);
   background:
@@ -518,20 +568,25 @@ a {
 }
 
 @media (max-width: 640px) {
-  .placeholder-logo {
+  .logo-image-frame {
     min-height: 4rem;
     font-size: 1.1rem;
   }
 
-  .date-strip {
-    width: 100%;
+  .band-logo-frame {
+    min-height: 9rem;
   }
 
-  .hero-skull {
-    right: -8rem;
-    top: 18rem;
-    width: 30rem;
-    opacity: 0.16;
+  .donation-logo-frame {
+    height: 9.75rem;
+  }
+
+  .donation-logo-frame .logo-image {
+    max-height: 7.75rem;
+  }
+
+  .date-strip {
+    width: 100%;
   }
 
   .info-panel,

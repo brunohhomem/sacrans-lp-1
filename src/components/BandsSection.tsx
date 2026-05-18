@@ -1,5 +1,11 @@
 import { bands } from '../content'
-import { PlaceholderLogo } from './PlaceholderLogo'
+import jackVintageLogo from '../assets/logo_jackvintage.png'
+import ressacaLogo from '../assets/logo_ressaca.png'
+
+const bandLogos: Record<string, string> = {
+  'Jack Vintage': jackVintageLogo,
+  'Ressaca 11': ressacaLogo,
+}
 
 export function BandsSection() {
   return (
@@ -10,7 +16,9 @@ export function BandsSection() {
           {bands.map((band, index) => (
             <article className="band-poster" key={band} data-tilt={index % 2 === 0 ? 'left' : 'right'}>
               <p className="poster-kicker">Ao vivo no esquenta</p>
-              <PlaceholderLogo label={band} />
+              <div className="logo-image-frame band-logo-frame">
+                <img src={bandLogos[band]} alt={band} className="logo-image" />
+              </div>
               <p className="poster-meta">Rock beneficente / Araçatuba / 06.06</p>
               <div className="poster-tape poster-tape-bottom" />
             </article>

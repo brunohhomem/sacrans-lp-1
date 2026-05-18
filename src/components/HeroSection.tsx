@@ -1,23 +1,19 @@
 import sacranLogo from '../assets/sacrans.png'
 import sacranMc from '../assets/sacransmc.png'
-import skull from '../assets/skull.png'
-import { PlaceholderLogo } from './PlaceholderLogo'
+import vitrolaLogo from '../assets/logo_vitrola.png'
 
 export function HeroSection() {
   return (
     <section className="hero-shell relative isolate min-h-screen px-5 py-6 sm:px-8 lg:px-12">
       <div className="absolute inset-0 -z-20 bg-[#e9e1d4]" />
-      <img
-        src={skull}
-        alt=""
-        className="hero-skull pointer-events-none absolute -z-10 max-w-none mix-blend-multiply"
-      />
       <div className="grit-layer absolute inset-0 -z-10" />
 
       <nav className="zine-nav mx-auto flex max-w-7xl items-center justify-between gap-4">
         <img src={sacranMc} alt="Sacrans Moto Clube" className="h-16 w-auto sm:h-20" />
         <div className="nav-stamp">
-          <PlaceholderLogo label="Vitrola" />
+          <div className="logo-image-frame nav-logo-frame">
+            <img src={vitrolaLogo} alt="Vitrola Vintage Bar" className="logo-image" />
+          </div>
         </div>
       </nav>
 
@@ -27,7 +23,7 @@ export function HeroSection() {
             Esquenta
           </p>
           <div className="logo-cutout">
-            <img src={sacranLogo} alt="Sacrans" className="w-full max-w-[34rem]" />
+            <img src={sacranLogo} alt="Sacrans" className="w-full max-w-[30rem]" />
           </div>
           <div className="date-strip mb-7 flex flex-wrap items-center gap-x-5 gap-y-3 py-5 text-lg font-bold uppercase text-[#e9e1d4] sm:text-xl">
             <span>Sábado 06/06</span>
@@ -37,10 +33,6 @@ export function HeroSection() {
           <h1 className="headline-ransom max-w-3xl text-5xl font-black uppercase leading-[0.9] text-[#2e2e2e] sm:text-7xl lg:text-8xl">
             3º Moto Rock Fest
           </h1>
-          <p className="paper-note mt-6 max-w-2xl text-lg font-semibold leading-relaxed text-[#2e2e2e] sm:text-xl">
-            O motor já está roncando. O lançamento oficial do maior evento motociclístico e de rock de Araçatuba e
-            região vai começar da forma que a cidade merece.
-          </p>
           <div className="mt-8 flex flex-col gap-3 text-base font-bold sm:flex-row">
             <a className="red-ticket" href="#programacao">
               Lançamento oficial da festa
@@ -56,19 +48,17 @@ export function HeroSection() {
 
       <div className="mx-auto max-w-7xl">
         <aside className="info-panel hero-info-panel taped-panel">
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8c2727]">Praça Hugo Lippi Junior 440</p>
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8c2727]">ESQUENTA | 3° MOTO ROCK FEST | SACRANS - MC</p>
           <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#2e2e2e] sm:text-4xl">
-            Vila Bandeirantes, SP
+            Lançamento oficial do maior evento motociclistico e de rock de Araçatuba e região.
           </h2>
-          <p className="mt-2 text-lg font-bold text-[#2e2e2e]">Em frente ao Vitrola Vintage Bar</p>
           <div className="mt-8 space-y-5 border-t-2 border-dashed border-[#2e2e2e]/45 pt-7 text-[#2e2e2e]">
             <p>
-              Será uma noite de rock, cerveja gelada e o início de uma experiência insana que promete elevar o nível
-              do festival em 2026.
+              O Esquenta Sacrans não será apenas uma noite de rock, motos e cerveja gelada. Será o ponto de partida para uma edição que promete marcar a história do festival em 2026.
             </p>
+
             <p>
-              Prepare o colete, reúna a família, convoque os irmãos de estrada e venha fazer parte do começo da edição
-              mais grandiosa da nossa história.
+              Então prepare o colete, reúna a família, chame os irmãos de estrada e venha viver o início da edição mais intensa que o Sacrans já realizou.
             </p>
           </div>
         </aside>
