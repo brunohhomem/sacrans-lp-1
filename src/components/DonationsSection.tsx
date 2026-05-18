@@ -13,10 +13,10 @@ export function DonationsSection() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div>
           <p className="eyebrow">Respeito, união e solidariedade</p>
-          <h2 className="headline-ransom mt-3 text-4xl font-black uppercase leading-tight text-[#2e2e2e] sm:text-6xl">
+          <h2 className="headline-ransom mt-3 text-4xl font-black uppercase leading-tight text-[#272727] sm:text-6xl">
             O esquenta também tem propósito.
           </h2>
-          <p className="paper-note mt-6 text-lg leading-relaxed text-[#2e2e2e]">
+          <p className="paper-note mt-6 text-lg leading-relaxed text-[#272727]">
             Como tradição do Sacrans, estaremos arrecadando doações para ajudar instituições da nossa cidade. Aqui, além
             da paixão pelo rock e motociclismo, existe irmandade de verdade.
           </p>

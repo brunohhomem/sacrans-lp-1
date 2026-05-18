@@ -6,7 +6,7 @@ export function RevealsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="max-w-4xl">
           <p className="eyebrow">Durante o evento</p>
-          <h2 className="headline-ransom mt-3 text-4xl font-black uppercase leading-tight text-[#e9e1d4] sm:text-6xl">
+          <h2 className="headline-ransom mt-3 text-4xl font-black uppercase leading-tight text-[#d7d4cb] sm:text-6xl">
             Tudo que está sendo preparado será revelado oficialmente.
           </h2>
         </div>
