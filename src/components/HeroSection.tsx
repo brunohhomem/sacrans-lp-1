@@ -10,12 +10,12 @@ export function HeroSection() {
 
       <nav className="zine-nav mx-auto flex max-w-7xl items-center justify-between gap-4">
         <img src={sacranMc} alt="Sacrans Moto Clube" className="h-16 w-auto sm:h-20" />
-        <div className="nav-stamp">
+        <div className="nav-stamp lg:hidden">
           <img src={skullImage} alt="" className="hero-skull" aria-hidden="true" />
         </div>
       </nav>
 
-      <div className="mx-auto grid max-w-7xl gap-10 pt-12 lg:grid-cols-[0.82fr_1fr] lg:items-center lg:pt-16">
+      <div className="mx-auto grid max-w-7xl gap-10 pt-12 lg:grid-cols-[0.82fr_1fr] lg:items-start lg:gap-12 lg:pt-16">
         <div className="hero-copy max-w-3xl">
           <p className="brush-title mb-1 text-5xl font-black uppercase leading-none text-[#8b1f1f] sm:text-7xl">
             Esquenta
@@ -41,25 +41,30 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="hidden min-h-[34rem] lg:block" />
-      </div>
-
-      <div className="mx-auto max-w-7xl">
-        <aside className="info-panel hero-info-panel taped-panel">
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8b1f1f]">ESQUENTA | 3° MOTO ROCK FEST | SACRANS - MC</p>
-          <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#272727] sm:text-4xl">
-            Lançamento oficial do maior evento motociclistico e de rock de Araçatuba e região.
-          </h2>
-          <div className="mt-8 space-y-5 border-t-2 border-dashed border-[#272727]/45 pt-7 text-[#272727]">
-            <p>
-              O Esquenta Sacrans não será apenas uma noite de rock, motos e cerveja gelada. Será o ponto de partida para uma edição que promete marcar a história do festival em 2026.
-            </p>
-
-            <p>
-              Então prepare o colete, reúna a família, chame os irmãos de estrada e venha viver o início da edição mais intensa que o Sacrans já realizou.
-            </p>
+        <div className="hero-invite-column flex flex-col items-center gap-6 lg:gap-8 lg:pt-2">
+          <div className="hero-skull-wrap hidden lg:flex" aria-hidden="true">
+            <img src={skullImage} alt="" className="hero-skull-desktop" aria-hidden="true" />
           </div>
-        </aside>
+
+          <aside className="info-panel hero-info-panel taped-panel w-full">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8b1f1f]">
+              ESQUENTA | 3° MOTO ROCK FEST | SACRANS - MC
+            </p>
+            <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#272727] sm:text-4xl">
+              Lançamento oficial do maior evento motociclistico e de rock de Araçatuba e região.
+            </h2>
+            <div className="mt-8 space-y-5 border-t-2 border-dashed border-[#272727]/45 pt-7 text-[#272727]">
+              <p>
+                O Esquenta Sacrans não será apenas uma noite de rock, motos e cerveja gelada. Será o ponto de partida
+                para uma edição que promete marcar a história do festival em 2026.
+              </p>
+              <p>
+                Então prepare o colete, reúna a família, chame os irmãos de estrada e venha viver o início da edição
+                mais intensa que o Sacrans já realizou.
+              </p>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
   )
