@@ -1,4 +1,4 @@
-import { EventAnimation } from './EventAnimation'
+import vitrolaLogo from '../assets/logo_vitrola.png'
 
 export function FinalCallSection() {
   return (
@@ -22,8 +22,8 @@ export function FinalCallSection() {
             <h3 className="mt-3 text-3xl font-black uppercase leading-tight text-[#272727]">Praça Hugo Lippi Junior 440</h3>
             <p className="mt-2 text-lg font-bold text-[#272727]">Em frente ao Vitrola Vintage Bar</p>
           </div>
-          <div className="final-animation">
-            <EventAnimation />
+          <div className="logo-image-frame final-vitrola-frame">
+            <img src={vitrolaLogo} alt="Vitrola Vintage Bar" className="logo-image" />
           </div>
         </aside>
       </div>

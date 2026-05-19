@@ -1,6 +1,6 @@
 import sacranLogo from '../assets/sacrans.png'
 import sacranMc from '../assets/sacransmc.png'
-import vitrolaLogo from '../assets/logo_vitrola.png'
+import skullImage from '../assets/skull.png'
 
 export function HeroSection() {
   return (
@@ -11,9 +11,7 @@ export function HeroSection() {
       <nav className="zine-nav mx-auto flex max-w-7xl items-center justify-between gap-4">
         <img src={sacranMc} alt="Sacrans Moto Clube" className="h-16 w-auto sm:h-20" />
         <div className="nav-stamp">
-          <div className="logo-image-frame nav-logo-frame">
-            <img src={vitrolaLogo} alt="Vitrola Vintage Bar" className="logo-image" />
-          </div>
+          <img src={skullImage} alt="" className="hero-skull" aria-hidden="true" />
         </div>
       </nav>
 

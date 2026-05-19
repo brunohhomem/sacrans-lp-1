@@ -176,6 +176,13 @@ a {
   padding: 0.7rem 0.9rem;
 }
 
+.zine-nav .hero-skull {
+  display: block;
+  width: clamp(2.2rem, 4.95vw, 3.3rem);
+  height: auto;
+  filter: none;
+}
+
 .band-logo-frame {
   min-height: 10.75rem;
   background: var(--ink);
@@ -349,6 +356,18 @@ a {
   float: none;
   margin: 0 auto;
   width: min(20rem, 72vw);
+}
+
+.final-vitrola-frame {
+  min-height: 11rem;
+  width: min(100%, 22rem);
+  justify-self: center;
+  background: var(--ink);
+  box-shadow: inset 0 0 0 6px var(--paper);
+}
+
+.final-vitrola-frame .logo-image {
+  max-height: 8.5rem;
 }
 
 .eyebrow {
@@ -549,10 +568,50 @@ a {
 }
 
 .site-footer {
+  position: relative;
   border-top: 5px dashed rgba(215, 212, 203, 0.42);
   background:
     radial-gradient(circle at 70% 20%, rgba(154, 139, 54, 0.12), transparent 18rem),
     #2e2e2e;
+  overflow: visible;
+}
+
+.footer-copy {
+  align-self: end;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-animation {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  translate: -50% 12%;
+  pointer-events: none;
+}
+
+.footer-animation .event-animation {
+  float: none;
+  margin: 0;
+  width: min(26rem, 90vw);
+}
+
+.footer-vitrola-frame {
+  min-height: 5.5rem;
+  width: min(13rem, 100%);
+  border-color: var(--paper);
+  background: var(--ink);
+  padding: 0.75rem 1rem;
+}
+
+.footer-vitrola-frame .logo-image {
+  max-height: 4rem;
 }
 
 .social-link {
@@ -583,6 +642,24 @@ a {
 }
 
 @media (max-width: 640px) {
+  .zine-nav {
+    position: relative;
+    justify-content: center;
+    padding-bottom: 2.35rem;
+  }
+
+  .nav-stamp {
+    position: absolute;
+    right: 1.2rem;
+    bottom: -3.75rem;
+    z-index: 4;
+    transform: rotate(12deg);
+  }
+
+  .zine-nav .hero-skull {
+    width: 3.68rem;
+  }
+
   .logo-image-frame {
     min-height: 4rem;
     font-size: 1.1rem;
@@ -616,5 +693,11 @@ a {
     float: none;
     margin: -0.75rem auto 1rem;
     width: min(12rem, 62vw);
+  }
+
+  .footer-animation {
+    position: static;
+    translate: none;
+    pointer-events: auto;
   }
 }

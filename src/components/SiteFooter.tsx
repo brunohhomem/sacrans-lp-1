@@ -1,3 +1,5 @@
+import { EventAnimation } from './EventAnimation'
+
 function InstagramIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
@@ -23,13 +25,17 @@ function FacebookIcon() {
 export function SiteFooter() {
   return (
     <footer className="site-footer px-5 py-10 sm:px-8 lg:px-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-7 md:flex-row md:items-end md:justify-between">
-        <div>
+      <div className="footer-inner mx-auto flex max-w-7xl flex-col gap-7 md:flex-row md:items-end md:justify-between">
+        <div className="footer-copy">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-red-500">Sacrans Motoclube</p>
           <p className="mt-3 text-sm text-zinc-400">CNPJ: 60.939.654/0001-07</p>
           <p className="mt-2 text-sm font-bold uppercase text-zinc-300">
             © 2026 SACRANS MOTOCLUBE. TODOS OS DIREITOS RESERVADOS.
           </p>
+        </div>
+
+        <div className="footer-animation">
+          <EventAnimation />
         </div>
 
         <div className="flex flex-col gap-5 md:items-end">
