@@ -5,7 +5,7 @@ import skullImage from '../assets/skull.png'
 export function HeroSection() {
   return (
     <section className="hero-shell relative isolate min-h-screen px-5 py-6 sm:px-8 lg:px-12">
-      <div className="absolute inset-0 -z-20 bg-[#d7d4cb]" />
+      <div className="absolute inset-0 -z-20 bg-[#2e2e2e]" />
       <div className="grit-layer absolute inset-0 -z-10" />
 
       <nav className="zine-nav mx-auto flex max-w-7xl items-center justify-between gap-4">
@@ -28,7 +28,7 @@ export function HeroSection() {
             <span className="hidden h-10 w-px bg-[#9a8b36] sm:block" />
             <span>A partir das 16h</span>
           </div>
-          <h1 className="headline-ransom max-w-3xl text-5xl font-black uppercase leading-[0.9] text-[#272727] sm:text-7xl lg:text-8xl">
+          <h1 className="headline-ransom max-w-3xl text-5xl font-black uppercase leading-[0.9] text-[#d7d4cb] sm:text-7xl lg:text-8xl">
             3º Moto Rock Fest
           </h1>
           <div className="mt-8 flex flex-col gap-3 text-base font-bold sm:flex-row">

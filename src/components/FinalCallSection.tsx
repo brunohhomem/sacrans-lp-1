@@ -2,13 +2,13 @@ import vitrolaLogo from '../assets/logo_vitrola.png'
 
 export function FinalCallSection() {
   return (
-    <section className="final-call px-5 py-20 sm:px-8 lg:px-12">
+    <section className="section-band final-call px-5 py-20 sm:px-8 lg:px-12">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
         <div className="max-w-4xl">
           <p className="brush-title w-fit text-4xl font-black uppercase text-[#8b1f1f] sm:text-6xl">
             Araçatuba vai tremer
           </p>
-          <h2 className="headline-ransom mt-7 text-4xl font-black uppercase leading-tight text-[#272727] sm:text-6xl">
+          <h2 className="headline-ransom mt-7 text-4xl font-black uppercase leading-tight text-[#d7d4cb] sm:text-6xl">
             O 3º Sacrans Moto Rock Fest está chegando.
           </h2>
           <p className="paper-note mt-6 max-w-3xl text-lg leading-relaxed text-[#272727]">

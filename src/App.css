@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Special+Elite&display=swap");
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
   font-family: "Special Elite", "Courier New", monospace;
-  background: #d7d4cb;
+  background: #2e2e2e;
   --ink: #272727;
   --paper: #d7d4cb;
   --paper-light: #e1ded6;
   --paper-stain: #b9b5aa;
+  --section: #2e2e2e;
+  --section-ink: #d7d4cb;
   --gold: #9a8b36;
   --red: #8b1f1f;
   --olive: #5f7d1e;
@@ -23,12 +25,13 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 16% 18%, rgba(39, 39, 39, 0.18) 0 1px, transparent 1.35px),
-    radial-gradient(circle at 78% 64%, rgba(39, 39, 39, 0.14) 0 1px, transparent 1.2px),
-    linear-gradient(90deg, rgba(39, 39, 39, 0.06) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(139, 31, 31, 0.025), rgba(39, 39, 39, 0.045)),
-    var(--paper);
+    radial-gradient(circle at 16% 18%, rgba(215, 212, 203, 0.08) 0 1px, transparent 1.35px),
+    radial-gradient(circle at 78% 64%, rgba(215, 212, 203, 0.06) 0 1px, transparent 1.2px),
+    linear-gradient(90deg, rgba(215, 212, 203, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(139, 31, 31, 0.06), rgba(39, 39, 39, 0.12)),
+    var(--section);
   background-size: 11px 11px, 17px 17px, 34px 34px, auto, auto;
+  color: var(--section-ink);
 }
 
 a {
@@ -36,30 +39,28 @@ a {
 }
 
 .hero-shell {
-  color: var(--ink);
+  color: var(--section-ink);
   background:
-    linear-gradient(176deg, rgba(215, 212, 203, 0) 78%, #2e2e2e 78.2%),
-    radial-gradient(circle at 80% 18%, rgba(154, 139, 54, 0.18), transparent 22rem),
-    radial-gradient(circle at 16% 86%, rgba(139, 31, 31, 0.24), transparent 24rem),
-    linear-gradient(90deg, rgba(39, 39, 39, 0.06) 1px, transparent 1px),
-    var(--paper);
-  background-size: auto, auto, auto, 36px 36px, auto;
+    radial-gradient(circle at 80% 18%, rgba(154, 139, 54, 0.14), transparent 22rem),
+    radial-gradient(circle at 16% 86%, rgba(139, 31, 31, 0.2), transparent 24rem),
+    repeating-linear-gradient(0deg, rgba(215, 212, 203, 0.05) 0 1px, transparent 1px 8px),
+    var(--section);
 }
 
 .grit-layer {
-  opacity: 0.8;
+  opacity: 0.55;
   background-image:
-    linear-gradient(2deg, transparent 0 13%, rgba(46, 46, 46, 0.62) 13% 13.35%, transparent 13.35% 100%),
-    linear-gradient(87deg, transparent 0 77%, rgba(46, 46, 46, 0.18) 77% 77.3%, transparent 77.3% 100%),
-    radial-gradient(circle at 7% 10%, rgba(46, 46, 46, 0.28) 0 1px, transparent 1px),
-    radial-gradient(circle at 93% 78%, rgba(46, 46, 46, 0.22) 0 1px, transparent 1px);
+    linear-gradient(2deg, transparent 0 13%, rgba(215, 212, 203, 0.12) 13% 13.35%, transparent 13.35% 100%),
+    linear-gradient(87deg, transparent 0 77%, rgba(215, 212, 203, 0.08) 77% 77.3%, transparent 77.3% 100%),
+    radial-gradient(circle at 7% 10%, rgba(215, 212, 203, 0.14) 0 1px, transparent 1px),
+    radial-gradient(circle at 93% 78%, rgba(215, 212, 203, 0.1) 0 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 8px 8px, 12px 12px;
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
 }
 
 .zine-nav {
   position: relative;
-  border-bottom: 4px dashed rgba(46, 46, 46, 0.82);
+  border-bottom: 4px dashed rgba(215, 212, 203, 0.42);
   padding-bottom: 1rem;
 }
 
@@ -104,7 +105,12 @@ a {
 .headline-ransom {
   font-family: "Bebas Neue", Impact, "Arial Narrow Bold", sans-serif;
   letter-spacing: 0;
-  text-shadow: 0.035em 0.035em 0 rgba(154, 139, 54, 0.56);
+  text-shadow: 0.035em 0.035em 0 rgba(154, 139, 54, 0.42);
+}
+
+.section-band .headline-ransom,
+.hero-shell .headline-ransom {
+  text-shadow: 0.035em 0.035em 0 rgba(139, 31, 31, 0.35);
 }
 
 .logo-cutout {
@@ -299,33 +305,16 @@ a {
   filter: grayscale(0.3) contrast(1.18) drop-shadow(6px 6px 0 rgba(46, 46, 46, 0.18));
 }
 
-.section-band {
-  position: relative;
-  background:
-    linear-gradient(184deg, #2e2e2e 0 7%, transparent 7.2%),
-    radial-gradient(circle at 12% 34%, rgba(154, 139, 54, 0.12), transparent 24rem),
-    repeating-linear-gradient(0deg, rgba(215, 212, 203, 0.05) 0 1px, transparent 1px 8px),
-    #2e2e2e;
-}
-
-.paper-section {
-  background:
-    radial-gradient(circle at 20% 30%, rgba(39, 39, 39, 0.17) 0 1px, transparent 1px),
-    radial-gradient(circle at 80% 70%, rgba(39, 39, 39, 0.14) 0 1px, transparent 1px),
-    repeating-linear-gradient(0deg, rgba(39, 39, 39, 0.035) 0 1px, transparent 1px 10px),
-    linear-gradient(118deg, rgba(185, 181, 170, 0.24), transparent 42%),
-    var(--paper);
-  background-size: 8px 8px, 12px 12px, auto, auto, auto;
-}
-
+.section-band,
+.paper-section,
 .final-call {
+  position: relative;
+  color: var(--section-ink);
   background:
-    radial-gradient(circle at 20% 30%, rgba(39, 39, 39, 0.17) 0 1px, transparent 1px),
-    radial-gradient(circle at 80% 70%, rgba(39, 39, 39, 0.14) 0 1px, transparent 1px),
-    repeating-linear-gradient(0deg, rgba(39, 39, 39, 0.035) 0 1px, transparent 1px 10px),
-    linear-gradient(118deg, rgba(185, 181, 170, 0.24), transparent 42%),
-    var(--paper);
-  background-size: 8px 8px, 12px 12px, auto, auto, auto;
+    radial-gradient(circle at 12% 34%, rgba(154, 139, 54, 0.12), transparent 24rem),
+    radial-gradient(circle at 88% 72%, rgba(139, 31, 31, 0.1), transparent 20rem),
+    repeating-linear-gradient(0deg, rgba(215, 212, 203, 0.05) 0 1px, transparent 1px 8px),
+    var(--section);
 }
 
 .final-address {
